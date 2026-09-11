@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4h66rynsh7x"]
+
+[ext_resource type="Script" uid="uid://vlikss2d2px0" path="res://assets/Skills/Codes/Fireball.gd" id="1_fhsuo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0qsb"]
+
+[node name="Fireball" type="Node2D"]
+script = ExtResource("1_fhsuo")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_d0qsb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

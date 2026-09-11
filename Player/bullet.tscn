@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://kqnsssdrhanl"]
+
+[ext_resource type="Script" uid="uid://cq8qmffyc4jqh" path="res://codes/bullet.gd" id="1_tqmay"]
+[ext_resource type="Texture2D" uid="uid://dgllm8nduucoi" path="res://sprites/Bullet_1.png" id="2_ggrph"]
+[ext_resource type="AudioStream" uid="uid://cqoxhrlr2scbw" path="res://Sounds/hitHurt.wav" id="3_d7yj7"]
+[ext_resource type="Texture2D" uid="uid://dqw8hs46hlgmb" path="res://sprites/Bullet_2.png" id="3_fdgrx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7knge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ggrph")
+}],
+"loop": true,
+"name": &"D1",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fdgrx")
+}],
+"loop": true,
+"name": &"D2",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8qja"]
+size = Vector2(32, 21)
+
+[node name="Bullet" type="Node2D"]
+script = ExtResource("1_tqmay")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.57016
+sprite_frames = SubResource("SpriteFrames_7knge")
+animation = &"D2"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(6.4, 6.4)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_v8qja")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_d7yj7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

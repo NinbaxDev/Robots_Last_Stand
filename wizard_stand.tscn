@@ -1,0 +1,359 @@
+[gd_scene load_steps=42 format=3 uid="uid://boi4afnalp0cf"]
+
+[ext_resource type="Texture2D" uid="uid://7x7cx2o8mlqk" path="res://sprites/background.png" id="1_crqff"]
+[ext_resource type="Script" uid="uid://pw2b811wc87" path="res://codes/Player.gd" id="2_uv4g6"]
+[ext_resource type="PackedScene" uid="uid://cn7ib4ea8l5cp" path="res://Player/umbrella.tscn" id="3_erhdv"]
+[ext_resource type="Texture2D" uid="uid://bn4fqbifqp0xh" path="res://sprites/Shield.png" id="3_k0yo5"]
+[ext_resource type="Texture2D" uid="uid://cp76nuhgguoc6" path="res://sprites/robot_jame_gam.png" id="3_qsodi"]
+[ext_resource type="Script" uid="uid://qles4pb6bjv2" path="res://codes/ui.gd" id="5_3p86s"]
+[ext_resource type="Texture2D" uid="uid://b05prjtogxkwf" path="res://sprites/Card_Mobulity_Chip.png" id="7_crqff"]
+[ext_resource type="Script" uid="uid://cpbwjj8r7aodc" path="res://codes/battle_manager.gd" id="7_eqrb5"]
+[ext_resource type="Script" uid="uid://bffo3644nfp6q" path="res://codes/round_manager.gd" id="8_kf4bp"]
+[ext_resource type="Texture2D" uid="uid://oq41by88kank" path="res://sprites/Card_Overcharge.png" id="8_qsodi"]
+[ext_resource type="AudioStream" uid="uid://cqoxhrlr2scbw" path="res://Sounds/hitHurt.wav" id="8_rrthl"]
+[ext_resource type="Texture2D" uid="uid://x70xcq5w5yi0" path="res://sprites/Card_Rapidfire_Chip.png" id="9_n6n5h"]
+[ext_resource type="Texture2D" uid="uid://b1gbyvc0gv1is" path="res://sprites/Card_Regen_Module.png" id="10_ko1kd"]
+[ext_resource type="AudioStream" uid="uid://rymmv0uqm3wi" path="res://Sounds/click.wav" id="11_ophmg"]
+[ext_resource type="Texture2D" uid="uid://cgn757078pgng" path="res://sprites/Card_Shield_Module.png" id="12_be7vg"]
+[ext_resource type="Texture2D" uid="uid://dmwda6yi8vp6r" path="res://sprites/Lifebar.png" id="12_ko1kd"]
+[ext_resource type="Script" uid="uid://3sf5wj5painn" path="res://codes/life_bar.gd" id="13_ophmg"]
+[ext_resource type="Texture2D" uid="uid://dhhnu1awvl5tc" path="res://sprites/Round-cout.png" id="14_m8jcd"]
+[ext_resource type="AudioStream" uid="uid://b5fmxwm3wnb1m" path="res://Sounds/pickupCoin.wav" id="15_p8awy"]
+[ext_resource type="Script" uid="uid://mvgnk38dx1wj" path="res://codes/pause_menu.gd" id="16_nt4e1"]
+[ext_resource type="Texture2D" uid="uid://dmacc4f8yom5s" path="res://sprites/botoes.png" id="17_m8jcd"]
+[ext_resource type="Texture2D" uid="uid://f73m2vstq702" path="res://sprites/Exit_button.png" id="18_p8awy"]
+[ext_resource type="Texture2D" uid="uid://bcj38puo0ixww" path="res://sprites/Back_button.png" id="19_fkkxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbrgc"]
+size = Vector2(808, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrthl"]
+size = Vector2(20, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m872f"]
+size = Vector2(70, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0r0n"]
+size = Vector2(24, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsodi"]
+size = Vector2(108, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6n5h"]
+size = Vector2(28, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ko1kd"]
+size = Vector2(70, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ophmg"]
+size = Vector2(20, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm5cx"]
+size = Vector2(48, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg2af"]
+size = Vector2(20, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt4e1"]
+size = Vector2(46, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8jcd"]
+size = Vector2(24, 359)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3p86s"]
+size = Vector2(63.3333, 117.308)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eqrb5"]
+font_size = 64
+
+[sub_resource type="Gradient" id="Gradient_ko1kd"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ophmg"]
+gradient = SubResource("Gradient_ko1kd")
+width = 360
+height = 21
+
+[sub_resource type="Gradient" id="Gradient_mm5cx"]
+colors = PackedColorArray(0.701961, 0, 0, 1, 0.701961, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mg2af"]
+gradient = SubResource("Gradient_mm5cx")
+width = 360
+height = 21
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("1_crqff")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(571, 609)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-1, -57.5)
+shape = SubResource("RectangleShape2D_tbrgc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
+position = Vector2(393, -94)
+shape = SubResource("RectangleShape2D_rrthl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
+position = Vector2(438, -111)
+shape = SubResource("RectangleShape2D_m872f")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground"]
+position = Vector2(461, -152)
+shape = SubResource("RectangleShape2D_d0r0n")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ground"]
+position = Vector2(527, -174)
+shape = SubResource("RectangleShape2D_qsodi")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-391, -97)
+shape = SubResource("RectangleShape2D_n6n5h")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-440, -117)
+shape = SubResource("RectangleShape2D_ko1kd")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-465, -160)
+shape = SubResource("RectangleShape2D_ophmg")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-499, -183)
+shape = SubResource("RectangleShape2D_mm5cx")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-513, -210)
+shape = SubResource("RectangleShape2D_mg2af")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-546, -217)
+shape = SubResource("RectangleShape2D_nt4e1")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-583, -403.5)
+shape = SubResource("RectangleShape2D_m8jcd")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Ground"]
+position = Vector2(593, -363)
+shape = SubResource("RectangleShape2D_m8jcd")
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+process_mode = 3
+position = Vector2(269, 494)
+scale = Vector2(0.6, 0.52)
+script = ExtResource("2_uv4g6")
+
+[node name="Shield" type="Sprite2D" parent="Player"]
+position = Vector2(-3.33331, -8.65381)
+scale = Vector2(4.16667, 4.98798)
+texture = ExtResource("3_k0yo5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture_filter = 1
+position = Vector2(0, 5.76923)
+scale = Vector2(4, 4)
+texture = ExtResource("3_qsodi")
+
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2(-1.66666, 8.65332)
+shape = SubResource("RectangleShape2D_3p86s")
+
+[node name="Umbrella" parent="Player" instance=ExtResource("3_erhdv")]
+position = Vector2(-1.14441e-05, -88.4615)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("8_rrthl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1.66666, 8.65332)
+shape = SubResource("RectangleShape2D_3p86s")
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("5_3p86s")
+
+[node name="Player_life" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -381.0
+offset_top = -298.0
+offset_right = -341.0
+offset_bottom = -275.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Enemy_life" type="Label" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -65.0
+offset_top = 20.0
+offset_right = -25.0
+offset_bottom = 43.0
+grow_horizontal = 0
+
+[node name="Victory_Defeat" type="Label" parent="UI"]
+visible = false
+texture_filter = 1
+offset_left = 457.0
+offset_top = 243.0
+offset_right = 673.0
+offset_bottom = 331.0
+text = "Victory"
+label_settings = SubResource("LabelSettings_eqrb5")
+
+[node name="Mobility_button" type="Button" parent="UI"]
+visible = false
+offset_left = 228.0
+offset_top = 135.0
+offset_right = 378.0
+offset_bottom = 335.0
+flat = true
+
+[node name="Icon" type="Sprite2D" parent="UI/Mobility_button"]
+position = Vector2(74, 99)
+texture = ExtResource("7_crqff")
+
+[node name="Overcharge_button" type="Button" parent="UI"]
+visible = false
+offset_left = 413.0
+offset_top = 135.0
+offset_right = 563.0
+offset_bottom = 335.0
+flat = true
+
+[node name="Icon" type="Sprite2D" parent="UI/Overcharge_button"]
+position = Vector2(74, 99)
+texture = ExtResource("8_qsodi")
+
+[node name="Rapidfire_button" type="Button" parent="UI"]
+visible = false
+offset_left = 597.0
+offset_top = 135.0
+offset_right = 747.0
+offset_bottom = 335.0
+flat = true
+
+[node name="Icon" type="Sprite2D" parent="UI/Rapidfire_button"]
+position = Vector2(74, 99)
+texture = ExtResource("9_n6n5h")
+
+[node name="Regen_button" type="Button" parent="UI"]
+visible = false
+offset_left = 774.0
+offset_top = 135.0
+offset_right = 924.0
+offset_bottom = 335.0
+flat = true
+
+[node name="Icon" type="Sprite2D" parent="UI/Regen_button"]
+position = Vector2(74, 99)
+texture = ExtResource("10_ko1kd")
+
+[node name="Shield_button" type="Button" parent="UI"]
+visible = false
+offset_left = 941.0
+offset_top = 130.0
+offset_right = 1099.0
+offset_bottom = 338.0
+flat = true
+
+[node name="Icon" type="Sprite2D" parent="UI/Shield_button"]
+position = Vector2(74, 99)
+texture = ExtResource("12_be7vg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI"]
+stream = ExtResource("11_ophmg")
+
+[node name="Life_bar" type="TextureProgressBar" parent="UI"]
+offset_left = 37.0
+offset_top = 26.0
+offset_right = 397.0
+offset_bottom = 47.0
+texture_under = SubResource("GradientTexture2D_ophmg")
+texture_progress = SubResource("GradientTexture2D_mg2af")
+script = ExtResource("13_ophmg")
+
+[node name="Life_bar_Sprite" type="Sprite2D" parent="UI"]
+position = Vector2(217.5, 36)
+scale = Vector2(0.9575, 0.88)
+texture = ExtResource("12_ko1kd")
+
+[node name="Round-cout" type="Sprite2D" parent="UI"]
+position = Vector2(1042, 38)
+texture = ExtResource("14_m8jcd")
+
+[node name="Round" type="Label" parent="UI"]
+offset_left = 1031.0
+offset_top = 38.0
+offset_right = 1071.0
+offset_bottom = 61.0
+
+[node name="Coin" type="AudioStreamPlayer2D" parent="UI"]
+stream = ExtResource("15_p8awy")
+
+[node name="Battle_Manager" type="Node" parent="."]
+script = ExtResource("7_eqrb5")
+
+[node name="Timer" type="Timer" parent="Battle_Manager"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Round_Manager" type="Node" parent="."]
+script = ExtResource("8_kf4bp")
+
+[node name="Pause_menu" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("16_nt4e1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause_menu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -62.5
+offset_right = 35.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_button" type="Button" parent="Pause_menu/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("19_fkkxg")
+flat = true
+
+[node name="Menu_button" type="Button" parent="Pause_menu/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("17_m8jcd")
+flat = true
+
+[node name="Exit_button" type="Button" parent="Pause_menu/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("18_p8awy")
+flat = true
+
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="UI/Mobility_button" to="UI" method="_on_mobility_button_pressed"]
+[connection signal="pressed" from="UI/Overcharge_button" to="UI" method="_on_overcharge_button_pressed"]
+[connection signal="pressed" from="UI/Rapidfire_button" to="UI" method="_on_rapidfire_button_pressed"]
+[connection signal="pressed" from="UI/Regen_button" to="UI" method="_on_regen_button_pressed"]
+[connection signal="pressed" from="UI/Shield_button" to="UI" method="_on_shield_button_pressed"]
+[connection signal="timeout" from="Battle_Manager/Timer" to="Battle_Manager" method="_on_timer_timeout"]
+[connection signal="pressed" from="Pause_menu/VBoxContainer/Back_button" to="Pause_menu" method="_on_back_button_pressed"]
+[connection signal="pressed" from="Pause_menu/VBoxContainer/Menu_button" to="Pause_menu" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Pause_menu/VBoxContainer/Exit_button" to="Pause_menu" method="_on_exit_button_pressed"]

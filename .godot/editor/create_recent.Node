@@ -1,0 +1,14 @@
+Sprite2D
+Button
+AudioStreamPlayer2D
+Label
+CanvasLayer
+VBoxContainer
+TextureProgressBar
+ProgressBar
+Area2D
+Timer
+AnimatedSprite2D
+HBoxContainer
+Control
+Node

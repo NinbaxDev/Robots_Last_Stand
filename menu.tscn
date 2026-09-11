@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhq0u0m11g4cu"]
+
+[ext_resource type="Script" uid="uid://4jfqdpbf38gm" path="res://codes/menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://c8ihkfq3lhwnm" path="res://sprites/Background_menu.png" id="2_ouk20"]
+[ext_resource type="Texture2D" uid="uid://blwud6oyamc8n" path="res://sprites/Start_button.png" id="3_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://nfv6rv3jrd8" path="res://sprites/Credits_button.png" id="4_l48gv"]
+[ext_resource type="Texture2D" uid="uid://f73m2vstq702" path="res://sprites/Exit_button.png" id="5_ecwwl"]
+[ext_resource type="AudioStream" uid="uid://rymmv0uqm3wi" path="res://Sounds/click.wav" id="6_l48gv"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ouk20")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -7.0
+offset_right = 49.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_ytr4m")
+flat = true
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_l48gv")
+flat = true
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("5_ecwwl")
+flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_l48gv")
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

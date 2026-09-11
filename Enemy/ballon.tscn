@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8gnkomnk2roi"]
+
+[ext_resource type="Script" uid="uid://bcvptvbarpxgs" path="res://codes/ballon.gd" id="1_3egfg"]
+[ext_resource type="Texture2D" uid="uid://omh27mju3bx7" path="res://sprites/ballon/ballon.png" id="2_dc8gp"]
+[ext_resource type="Texture2D" uid="uid://dypcsn7xr6pth" path="res://sprites/ballon/ballon1.png" id="3_v5ft6"]
+[ext_resource type="Texture2D" uid="uid://dmfrnd1vn1j0s" path="res://sprites/ballon/ballon_hit1.png" id="4_t6vcm"]
+[ext_resource type="AudioStream" uid="uid://cqoxhrlr2scbw" path="res://Sounds/hitHurt.wav" id="4_v5ft6"]
+[ext_resource type="Texture2D" uid="uid://blebedxrssomb" path="res://sprites/ballon/ballon_hit2.png" id="5_lxjye"]
+[ext_resource type="Texture2D" uid="uid://b5f0y181ofral" path="res://sprites/ballon/ballon_hit3.png" id="6_p0gi2"]
+[ext_resource type="Texture2D" uid="uid://cb0nmoqatppls" path="res://sprites/ballon/ballon_hit4.png" id="7_a0vbu"]
+[ext_resource type="Texture2D" uid="uid://7hvir14bvelf" path="res://sprites/ballon/ballon_hit5.png" id="8_5cm2f"]
+[ext_resource type="Texture2D" uid="uid://c4r4c8g4v6qeb" path="res://sprites/ballon/ballon_hit6.png" id="9_dipwk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ytspf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dc8gp")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_v5ft6")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t6vcm")
+}],
+"loop": true,
+"name": &"hit1",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_lxjye")
+}],
+"loop": true,
+"name": &"hit2",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_p0gi2")
+}],
+"loop": true,
+"name": &"hit3",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_a0vbu")
+}],
+"loop": true,
+"name": &"hit4",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5cm2f")
+}],
+"loop": true,
+"name": &"hit5",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_dipwk")
+}],
+"loop": true,
+"name": &"hit6",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clkrc"]
+size = Vector2(44, 81)
+
+[node name="Ballon" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_3egfg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ytspf")
+animation = &"hit1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -6.5)
+shape = SubResource("RectangleShape2D_clkrc")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_v5ft6")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

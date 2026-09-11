@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c3qpc7vbaj7os"]
+
+[ext_resource type="Script" uid="uid://bjtoks5qdh0dp" path="res://codes/cloud_enemy.gd" id="1_8mynk"]
+[ext_resource type="PackedScene" uid="uid://ca528bfbpbha3" path="res://drop.tscn" id="2_q47jj"]
+[ext_resource type="Texture2D" uid="uid://bilc2qbse7k6t" path="res://sprites/Cloud_boss.png" id="3_j47h5"]
+[ext_resource type="Texture2D" uid="uid://d11i3e6se7n8m" path="res://sprites/Cloud_boss_hit.png" id="4_kounr"]
+[ext_resource type="AudioStream" uid="uid://cqoxhrlr2scbw" path="res://Sounds/hitHurt.wav" id="5_q47jj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sytix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j47h5")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kounr")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmn2t"]
+size = Vector2(126.206, 72)
+
+[node name="Cloud" type="CharacterBody2D" unique_id=1080387610 groups=["Enemy"]]
+script = ExtResource("1_8mynk")
+drop_scene = ExtResource("2_q47jj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=222649557]
+sprite_frames = SubResource("SpriteFrames_sytix")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119761726]
+position = Vector2(0.0548096, -1)
+shape = SubResource("RectangleShape2D_rmn2t")
+
+[node name="Timer" type="Timer" parent="." unique_id=805031619]
+wait_time = 4.0
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1388226887]
+stream = ExtResource("5_q47jj")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

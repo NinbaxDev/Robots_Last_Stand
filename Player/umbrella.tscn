@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn7ib4ea8l5cp"]
+
+[ext_resource type="Script" uid="uid://dl8jd4o60tfoc" path="res://codes/umbrella.gd" id="1_4uhrg"]
+[ext_resource type="Texture2D" uid="uid://e5w5ie1mcm54" path="res://sprites/gun.png" id="2_4uhrg"]
+[ext_resource type="Texture2D" uid="uid://ch24bemc0o0jn" path="res://sprites/gun_open.png" id="3_24ty1"]
+[ext_resource type="AudioStream" uid="uid://bju1qqh7l78r3" path="res://Sounds/laserShoot.wav" id="4_mj7wl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wfw2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4uhrg")
+}],
+"loop": true,
+"name": &"Close",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_24ty1")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 0.0
+}]
+
+[node name="Umbrella" type="Node2D"]
+script = ExtResource("1_4uhrg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_wfw2x")
+animation = &"Close"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(62, -1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mj7wl")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
