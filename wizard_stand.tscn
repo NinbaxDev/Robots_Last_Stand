@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://boi4afnalp0cf"]
+[gd_scene format=3 uid="uid://boi4afnalp0cf"]
 
 [ext_resource type="Texture2D" uid="uid://7x7cx2o8mlqk" path="res://sprites/background.png" id="1_crqff"]
 [ext_resource type="Script" uid="uid://pw2b811wc87" path="res://codes/Player.gd" id="2_uv4g6"]
@@ -82,106 +82,106 @@ gradient = SubResource("Gradient_mm5cx")
 width = 360
 height = 21
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1747934754]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1593070980]
 texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(2, 2)
 texture = ExtResource("1_crqff")
 
-[node name="Ground" type="StaticBody2D" parent="."]
+[node name="Ground" type="StaticBody2D" parent="." unique_id=885788516]
 position = Vector2(571, 609)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=482360117]
 position = Vector2(-1, -57.5)
 shape = SubResource("RectangleShape2D_tbrgc")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground" unique_id=30439389]
 position = Vector2(393, -94)
 shape = SubResource("RectangleShape2D_rrthl")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground" unique_id=46685178]
 position = Vector2(438, -111)
 shape = SubResource("RectangleShape2D_m872f")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground" unique_id=1198650905]
 position = Vector2(461, -152)
 shape = SubResource("RectangleShape2D_d0r0n")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ground" unique_id=934721465]
 position = Vector2(527, -174)
 shape = SubResource("RectangleShape2D_qsodi")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ground" unique_id=529011986]
 position = Vector2(-391, -97)
 shape = SubResource("RectangleShape2D_n6n5h")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Ground" unique_id=1427561171]
 position = Vector2(-440, -117)
 shape = SubResource("RectangleShape2D_ko1kd")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Ground" unique_id=1287783409]
 position = Vector2(-465, -160)
 shape = SubResource("RectangleShape2D_ophmg")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Ground" unique_id=127937803]
 position = Vector2(-499, -183)
 shape = SubResource("RectangleShape2D_mm5cx")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Ground" unique_id=1202918730]
 position = Vector2(-513, -210)
 shape = SubResource("RectangleShape2D_mg2af")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Ground" unique_id=1629246311]
 position = Vector2(-546, -217)
 shape = SubResource("RectangleShape2D_nt4e1")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Ground" unique_id=887860120]
 position = Vector2(-583, -403.5)
 shape = SubResource("RectangleShape2D_m8jcd")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Ground" unique_id=1617753227]
 position = Vector2(593, -363)
 shape = SubResource("RectangleShape2D_m8jcd")
 
-[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1727604476 groups=["Player"]]
 process_mode = 3
 position = Vector2(269, 494)
 scale = Vector2(0.6, 0.52)
 script = ExtResource("2_uv4g6")
 
-[node name="Shield" type="Sprite2D" parent="Player"]
+[node name="Shield" type="Sprite2D" parent="Player" unique_id=1663287855]
 position = Vector2(-3.33331, -8.65381)
 scale = Vector2(4.16667, 4.98798)
 texture = ExtResource("3_k0yo5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1344622573]
 texture_filter = 1
 position = Vector2(0, 5.76923)
 scale = Vector2(4, 4)
 texture = ExtResource("3_qsodi")
 
-[node name="Area2D" type="Area2D" parent="Player"]
+[node name="Area2D" type="Area2D" parent="Player" unique_id=1452751037]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
-position = Vector2(-1.66666, 8.65332)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D" unique_id=258630045]
+position = Vector2(-1.6666598, 10.576416)
 shape = SubResource("RectangleShape2D_3p86s")
 
-[node name="Umbrella" parent="Player" instance=ExtResource("3_erhdv")]
+[node name="Umbrella" parent="Player" unique_id=1073997319 instance=ExtResource("3_erhdv")]
 position = Vector2(-1.14441e-05, -88.4615)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player" unique_id=1105158391]
 stream = ExtResource("8_rrthl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1.66666, 8.65332)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1243792836]
+position = Vector2(-1.6666598, 10.576416)
 shape = SubResource("RectangleShape2D_3p86s")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1597108370]
 script = ExtResource("5_3p86s")
 
-[node name="Player_life" type="Label" parent="UI"]
+[node name="Player_life" type="Label" parent="UI" unique_id=1238135361]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -194,7 +194,7 @@ offset_bottom = -275.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Enemy_life" type="Label" parent="UI"]
+[node name="Enemy_life" type="Label" parent="UI" unique_id=12099448]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -204,7 +204,7 @@ offset_right = -25.0
 offset_bottom = 43.0
 grow_horizontal = 0
 
-[node name="Victory_Defeat" type="Label" parent="UI"]
+[node name="Victory_Defeat" type="Label" parent="UI" unique_id=1243404153]
 visible = false
 texture_filter = 1
 offset_left = 457.0
@@ -214,7 +214,7 @@ offset_bottom = 331.0
 text = "Victory"
 label_settings = SubResource("LabelSettings_eqrb5")
 
-[node name="Mobility_button" type="Button" parent="UI"]
+[node name="Mobility_button" type="Button" parent="UI" unique_id=605898647]
 visible = false
 offset_left = 228.0
 offset_top = 135.0
@@ -222,11 +222,11 @@ offset_right = 378.0
 offset_bottom = 335.0
 flat = true
 
-[node name="Icon" type="Sprite2D" parent="UI/Mobility_button"]
+[node name="Icon" type="Sprite2D" parent="UI/Mobility_button" unique_id=1957504084]
 position = Vector2(74, 99)
 texture = ExtResource("7_crqff")
 
-[node name="Overcharge_button" type="Button" parent="UI"]
+[node name="Overcharge_button" type="Button" parent="UI" unique_id=329833227]
 visible = false
 offset_left = 413.0
 offset_top = 135.0
@@ -234,11 +234,11 @@ offset_right = 563.0
 offset_bottom = 335.0
 flat = true
 
-[node name="Icon" type="Sprite2D" parent="UI/Overcharge_button"]
+[node name="Icon" type="Sprite2D" parent="UI/Overcharge_button" unique_id=663858788]
 position = Vector2(74, 99)
 texture = ExtResource("8_qsodi")
 
-[node name="Rapidfire_button" type="Button" parent="UI"]
+[node name="Rapidfire_button" type="Button" parent="UI" unique_id=671066309]
 visible = false
 offset_left = 597.0
 offset_top = 135.0
@@ -246,11 +246,11 @@ offset_right = 747.0
 offset_bottom = 335.0
 flat = true
 
-[node name="Icon" type="Sprite2D" parent="UI/Rapidfire_button"]
+[node name="Icon" type="Sprite2D" parent="UI/Rapidfire_button" unique_id=1473214433]
 position = Vector2(74, 99)
 texture = ExtResource("9_n6n5h")
 
-[node name="Regen_button" type="Button" parent="UI"]
+[node name="Regen_button" type="Button" parent="UI" unique_id=1412508599]
 visible = false
 offset_left = 774.0
 offset_top = 135.0
@@ -258,11 +258,11 @@ offset_right = 924.0
 offset_bottom = 335.0
 flat = true
 
-[node name="Icon" type="Sprite2D" parent="UI/Regen_button"]
+[node name="Icon" type="Sprite2D" parent="UI/Regen_button" unique_id=414703712]
 position = Vector2(74, 99)
 texture = ExtResource("10_ko1kd")
 
-[node name="Shield_button" type="Button" parent="UI"]
+[node name="Shield_button" type="Button" parent="UI" unique_id=1461683702]
 visible = false
 offset_left = 941.0
 offset_top = 130.0
@@ -270,14 +270,14 @@ offset_right = 1099.0
 offset_bottom = 338.0
 flat = true
 
-[node name="Icon" type="Sprite2D" parent="UI/Shield_button"]
+[node name="Icon" type="Sprite2D" parent="UI/Shield_button" unique_id=1791007011]
 position = Vector2(74, 99)
 texture = ExtResource("12_be7vg")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="UI" unique_id=2060093947]
 stream = ExtResource("11_ophmg")
 
-[node name="Life_bar" type="TextureProgressBar" parent="UI"]
+[node name="Life_bar" type="TextureProgressBar" parent="UI" unique_id=366959775]
 offset_left = 37.0
 offset_top = 26.0
 offset_right = 397.0
@@ -286,40 +286,40 @@ texture_under = SubResource("GradientTexture2D_ophmg")
 texture_progress = SubResource("GradientTexture2D_mg2af")
 script = ExtResource("13_ophmg")
 
-[node name="Life_bar_Sprite" type="Sprite2D" parent="UI"]
+[node name="Life_bar_Sprite" type="Sprite2D" parent="UI" unique_id=546487902]
 position = Vector2(217.5, 36)
 scale = Vector2(0.9575, 0.88)
 texture = ExtResource("12_ko1kd")
 
-[node name="Round-cout" type="Sprite2D" parent="UI"]
+[node name="Round-cout" type="Sprite2D" parent="UI" unique_id=2093790581]
 position = Vector2(1042, 38)
 texture = ExtResource("14_m8jcd")
 
-[node name="Round" type="Label" parent="UI"]
+[node name="Round" type="Label" parent="UI" unique_id=1128021964]
 offset_left = 1031.0
 offset_top = 38.0
 offset_right = 1071.0
 offset_bottom = 61.0
 
-[node name="Coin" type="AudioStreamPlayer2D" parent="UI"]
+[node name="Coin" type="AudioStreamPlayer2D" parent="UI" unique_id=1562184161]
 stream = ExtResource("15_p8awy")
 
-[node name="Battle_Manager" type="Node" parent="."]
+[node name="Battle_Manager" type="Node" parent="." unique_id=324698433]
 script = ExtResource("7_eqrb5")
 
-[node name="Timer" type="Timer" parent="Battle_Manager"]
+[node name="Timer" type="Timer" parent="Battle_Manager" unique_id=1402382524]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=788871338]
 position = Vector2(576, 324)
 
-[node name="Round_Manager" type="Node" parent="."]
+[node name="Round_Manager" type="Node" parent="." unique_id=1480901790]
 script = ExtResource("8_kf4bp")
 
-[node name="Pause_menu" type="CanvasLayer" parent="."]
+[node name="Pause_menu" type="CanvasLayer" parent="." unique_id=928314685]
 process_mode = 3
 script = ExtResource("16_nt4e1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Pause_menu"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause_menu" unique_id=1388110942]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -332,17 +332,17 @@ offset_bottom = 62.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Back_button" type="Button" parent="Pause_menu/VBoxContainer"]
+[node name="Back_button" type="Button" parent="Pause_menu/VBoxContainer" unique_id=237595634]
 layout_mode = 2
 icon = ExtResource("19_fkkxg")
 flat = true
 
-[node name="Menu_button" type="Button" parent="Pause_menu/VBoxContainer"]
+[node name="Menu_button" type="Button" parent="Pause_menu/VBoxContainer" unique_id=2077252665]
 layout_mode = 2
 icon = ExtResource("17_m8jcd")
 flat = true
 
-[node name="Exit_button" type="Button" parent="Pause_menu/VBoxContainer"]
+[node name="Exit_button" type="Button" parent="Pause_menu/VBoxContainer" unique_id=1386048283]
 layout_mode = 2
 icon = ExtResource("18_p8awy")
 flat = true

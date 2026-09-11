@@ -1,18 +1,17 @@
 extends CanvasLayer
 
 @onready var player = get_node("../Player")
-@onready var round = $Round
 
 func _ready() -> void:
 	$Player_life.text = str("PLAYER LIFE:", PlayerData.life)
 	player.life_update_p.connect(life_update_player)
-	round.text = str(RoundManager.current_round)
+	$Round.text = str(RoundManager.current_round)
 
 func life_update_player(life: int) -> void:
 	$Player_life.text = str("PLAYER LIFE:", life)
 
 func new_round():
-	round.text = str(RoundManager.current_round)
+	$Round.text = str(RoundManager.current_round)
 
 func show_options():
 	await get_tree().create_timer(1).timeout
@@ -27,7 +26,7 @@ func show_options():
 		$Regen_button.visible = true
 	if PlayerData.shield == 0:
 		$Shield_button.visible = true
-	if PlayerData.max_life >= 40 && PlayerData.attack_speed < 0.0 && PlayerData.attack > 5 && PlayerData.velocity >= 320.0 && PlayerData.shield > 0:
+	if PlayerData.max_life > 40 && PlayerData.attack_speed < 0.1 && PlayerData.attack >= 5 && PlayerData.velocity >= 320.0 && PlayerData.shield > 0:
 		Globalsignal.powerup_selected.emit()
 	new_round()
 
