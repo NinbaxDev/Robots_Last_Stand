@@ -6,3 +6,5 @@ res://codes/round_manager.gd
 res://codes/Player.gd
 res://menu.tscn
 res://codes/menu.gd
+res://codes_universal.tscn
+res://codes/thunder.gd

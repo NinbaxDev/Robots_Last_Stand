@@ -20,11 +20,11 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-PlayerData="*res://codes/PlayerData.gd"
-EnemyData="*res://codes/enemy_data.gd"
-Globalsignal="*res://codes/globalsignal.gd"
+PlayerData="*res://codes/Universal Codes/PlayerData.gd"
+EnemyData="*res://codes/Universal Codes/enemy_data.gd"
+Globalsignal="*res://codes/Universal Codes/globalsignal.gd"
+RoundManager="*res://codes/Universal Codes/round_manager.gd"
 MusicPlayer="*res://MusicPlayer.tscn"
-RoundManager="*res://codes/round_manager.gd"
 
 [display]
 
