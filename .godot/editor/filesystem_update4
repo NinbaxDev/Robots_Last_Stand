@@ -8,3 +8,7 @@ res://menu.tscn
 res://codes/menu.gd
 res://codes_universal.tscn
 res://codes/thunder.gd
+res://export_presets.cfg
+res://codes/ballon.gd
+res://codes/cloud_enemy.gd
+res://codes/Universal Codes/enemy_data.gd

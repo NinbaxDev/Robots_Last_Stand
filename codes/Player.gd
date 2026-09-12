@@ -7,12 +7,12 @@ signal player_die
 
 func _ready() -> void:
 	$Shield.visible = false
-	PlayerData.life = 500
-	PlayerData.max_life = 500
-	PlayerData.attack = 10
-	PlayerData.attack_speed = 0.1
-	PlayerData.velocity = 600
-	PlayerData.shield = 1000
+	PlayerData.life = 15
+	PlayerData.max_life = 15
+	PlayerData.attack = 1
+	PlayerData.attack_speed = 0.4
+	PlayerData.velocity = 200
+	PlayerData.shield = 0
 	PlayerData.Pause_menu = get_parent().get_node("Pause_menu")
 
 func _physics_process(delta: float) -> void:
