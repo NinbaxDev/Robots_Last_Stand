@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://qles4pb6bjv2" path="res://codes/ui.gd" id="5_3p86s"]
 [ext_resource type="Texture2D" uid="uid://b05prjtogxkwf" path="res://sprites/Card_Mobulity_Chip.png" id="7_crqff"]
 [ext_resource type="Script" uid="uid://cpbwjj8r7aodc" path="res://codes/battle_manager.gd" id="7_eqrb5"]
-[ext_resource type="Script" uid="uid://bffo3644nfp6q" path="res://codes/round_manager.gd" id="8_kf4bp"]
 [ext_resource type="Texture2D" uid="uid://oq41by88kank" path="res://sprites/Card_Overcharge.png" id="8_qsodi"]
 [ext_resource type="AudioStream" uid="uid://cqoxhrlr2scbw" path="res://Sounds/hitHurt.wav" id="8_rrthl"]
 [ext_resource type="Texture2D" uid="uid://x70xcq5w5yi0" path="res://sprites/Card_Rapidfire_Chip.png" id="9_n6n5h"]
@@ -311,9 +310,6 @@ script = ExtResource("7_eqrb5")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=788871338]
 position = Vector2(576, 324)
-
-[node name="Round_Manager" type="Node" parent="." unique_id=1480901790]
-script = ExtResource("8_kf4bp")
 
 [node name="Pause_menu" type="CanvasLayer" parent="." unique_id=928314685]
 process_mode = 3
