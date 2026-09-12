@@ -1,5 +1,8 @@
 res://wizard_stand.tscn
 res://codes/battle_manager.gd
-res://codes/round_manager.gd
-res://codes/ui.gd
 res://codes/PlayerData.gd
+res://Enemy/cloud.tscn
+res://codes/round_manager.gd
+res://codes/Player.gd
+res://menu.tscn
+res://codes/menu.gd

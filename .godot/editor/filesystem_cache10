@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1789163371
+::res://::1789216964
 codes_universal.tscn::PackedScene/PackedScene::6235270905472127680::1759261319::0::1::::<><><>0<>0<><>::uid://cs3it80edo3xb::::res://codes/PlayerData.gd<>uid://ciqeqoi4f4rj2::::res://codes/enemy_data.gd
 credits.tscn::PackedScene/PackedScene::5317606089490977009::1759261318::0::1::::<><><>0<>0<><>::uid://bk7xn2b0yarhg::::res://codes/credits.gd<>uid://bcj38puo0ixww::::res://sprites/Back_button.png<>uid://c4dt6u4aowiu2::::res://sprites/Credits_background.png<>uid://rymmv0uqm3wi::::res://Sounds/click.wav
 drop.tscn::PackedScene/PackedScene::4836471050324451600::1759261319::0::1::::<><><>0<>0<><>::uid://cx84py1cam8hf::::res://codes/drop.gd<>uid://bwt60f4u5hekj::::res://sprites/thunder.png<>uid://dao7q20g7ixf1::::res://sprites/Drop_1.png
@@ -10,7 +10,7 @@ Robot's Last Stand.apple-touch-icon.png::CompressedTexture2D/CompressedTexture2D
 Robot's Last Stand.icon.png::CompressedTexture2D/CompressedTexture2D::2314018046079306594::1752979025::1752980590::1::::<><><>0<>0<>901f7471b1de842bd9b4635052904dd0<>res://.godot/imported/Robot's Last Stand.icon.png-1a851f01d477e182938bc3538fb18d21.ctex::
 Robot's Last Stand.png::CompressedTexture2D/CompressedTexture2D::8039650139131356968::1752979025::1752980590::1::::<><><>0<>0<>90671a0f499686a042747a2d02afa07b<>res://.godot/imported/Robot's Last Stand.png-5d1da24794310811856095495327fec6.ctex::
 thunder.tscn::PackedScene/PackedScene::5505527984636008233::1759261319::0::1::::<><><>0<>0<><>::uid://cfpxnyrlo5hag::::res://codes/thunder.gd<>uid://bjlooxarbmeuh::::res://sprites/thunder1.png<>uid://bwvs5ui81j6bp::::res://sprites/thunder2.png
-wizard_stand.tscn::PackedScene::3387340592162786453::1789151595::0::1::::<><><>0<>0<><>::uid://7x7cx2o8mlqk::::res://sprites/background.png<>uid://pw2b811wc87::::res://codes/Player.gd<>uid://cn7ib4ea8l5cp::::res://Player/umbrella.tscn<>uid://bn4fqbifqp0xh::::res://sprites/Shield.png<>uid://cp76nuhgguoc6::::res://sprites/robot_jame_gam.png<>uid://qles4pb6bjv2::::res://codes/ui.gd<>uid://b05prjtogxkwf::::res://sprites/Card_Mobulity_Chip.png<>uid://cpbwjj8r7aodc::::res://codes/battle_manager.gd<>uid://bffo3644nfp6q::::res://codes/round_manager.gd<>uid://oq41by88kank::::res://sprites/Card_Overcharge.png<>uid://cqoxhrlr2scbw::::res://Sounds/hitHurt.wav<>uid://x70xcq5w5yi0::::res://sprites/Card_Rapidfire_Chip.png<>uid://b1gbyvc0gv1is::::res://sprites/Card_Regen_Module.png<>uid://rymmv0uqm3wi::::res://Sounds/click.wav<>uid://cgn757078pgng::::res://sprites/Card_Shield_Module.png<>uid://dmwda6yi8vp6r::::res://sprites/Lifebar.png<>uid://3sf5wj5painn::::res://codes/life_bar.gd<>uid://dhhnu1awvl5tc::::res://sprites/Round-cout.png<>uid://b5fmxwm3wnb1m::::res://Sounds/pickupCoin.wav<>uid://mvgnk38dx1wj::::res://codes/pause_menu.gd<>uid://dmacc4f8yom5s::::res://sprites/botoes.png<>uid://f73m2vstq702::::res://sprites/Exit_button.png<>uid://bcj38puo0ixww::::res://sprites/Back_button.png
+wizard_stand.tscn::PackedScene::3387340592162786453::1789170175::0::1::::<><><>0<>0<><>::uid://7x7cx2o8mlqk::::res://sprites/background.png<>uid://pw2b811wc87::::res://codes/Player.gd<>uid://cn7ib4ea8l5cp::::res://Player/umbrella.tscn<>uid://bn4fqbifqp0xh::::res://sprites/Shield.png<>uid://cp76nuhgguoc6::::res://sprites/robot_jame_gam.png<>uid://qles4pb6bjv2::::res://codes/ui.gd<>uid://b05prjtogxkwf::::res://sprites/Card_Mobulity_Chip.png<>uid://cpbwjj8r7aodc::::res://codes/battle_manager.gd<>uid://bffo3644nfp6q::::res://codes/round_manager.gd<>uid://oq41by88kank::::res://sprites/Card_Overcharge.png<>uid://cqoxhrlr2scbw::::res://Sounds/hitHurt.wav<>uid://x70xcq5w5yi0::::res://sprites/Card_Rapidfire_Chip.png<>uid://b1gbyvc0gv1is::::res://sprites/Card_Regen_Module.png<>uid://rymmv0uqm3wi::::res://Sounds/click.wav<>uid://cgn757078pgng::::res://sprites/Card_Shield_Module.png<>uid://dmwda6yi8vp6r::::res://sprites/Lifebar.png<>uid://3sf5wj5painn::::res://codes/life_bar.gd<>uid://dhhnu1awvl5tc::::res://sprites/Round-cout.png<>uid://b5fmxwm3wnb1m::::res://Sounds/pickupCoin.wav<>uid://mvgnk38dx1wj::::res://codes/pause_menu.gd<>uid://dmacc4f8yom5s::::res://sprites/botoes.png<>uid://f73m2vstq702::::res://sprites/Exit_button.png<>uid://bcj38puo0ixww::::res://sprites/Back_button.png
 ::res://addons/::1762373081
 ::res://addons/Magic_Builder/::1762372974
 create_button.gd::GDScript/GDScript::700046064786857629::1762371921::0::1::::<>Button<><>0<>1<><>::
@@ -25,10 +25,10 @@ tool_menu.gd::GDScript/GDScript::1496217600953035129::1762203792::0::1::::<>Cont
 Fireball.tscn::PackedScene::130537832660251667::1762373113::0::1::::<><><>0<>0<><>::uid://vlikss2d2px0::::res://assets/Skills/Codes/Fireball.gd
 ::res://assets/Skills/Codes/::1762373113
 Fireball.gd::GDScript::1497178440033145163::1762373113::0::1::::<>Node2D<><>0<>0<><>::
-::res://codes/::1789151354
+::res://codes/::1789170175
 audio_stream_player.gd::GDScript/GDScript::8626977844765003961::1752932609::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
 ballon.gd::GDScript/GDScript::2571096093338602626::1753290616::0::1::::<>CharacterBody2D<><>0<>0<><>::
-battle_manager.gd::GDScript::5829090770200632192::1789151354::0::1::::<>Node<><>0<>0<><>::
+battle_manager.gd::GDScript::5829090770200632192::1789170175::0::1::::<>Node<><>0<>0<><>::
 bullet.gd::GDScript/GDScript::5964980504324861459::1752689264::0::1::::<>Node2D<><>0<>0<><>::
 cloud_enemy.gd::GDScript/GDScript::3058212342096022721::1752849614::0::1::::<>Node2D<><>0<>0<><>::
 credits.gd::GDScript/GDScript::3155790335200965912::1752535888::0::1::::<>Control<><>0<>0<><>::
@@ -39,11 +39,11 @@ life_bar.gd::GDScript/GDScript::2002804751019022295::1752884658::0::1::::<>Textu
 menu.gd::GDScript/GDScript::2054388203751160428::1753290143::0::1::::<>Control<><>0<>0<><>::
 pause_menu.gd::GDScript/GDScript::886006143761344229::1752931555::0::1::::<>CanvasLayer<><>0<>0<><>::
 Player.gd::GDScript/GDScript::32349761306020826::1753219613::0::1::::<>CharacterBody2D<><>0<>0<><>::
-PlayerData.gd::GDScript/GDScript::6094564568087782751::1753218106::0::1::::<>Node<><>0<>0<><>::
-round_manager.gd::GDScript/GDScript::2748588505140026562::1753360558::0::1::::<>Node<><>0<>0<><>::
+PlayerData.gd::GDScript::6094564568087782751::1789168129::0::1::::<>Node<><>0<>0<><>::
+round_manager.gd::GDScript::2748588505140026562::1789168831::0::1::::<>Node<><>0<>0<><>::
 selection_phase.gd::GDScript/GDScript::7247460769922282031::1752848364::0::1::::<>Control<><>0<>0<><>::
 thunder.gd::GDScript/GDScript::5156172245383417106::1753290616::0::1::::<>Area2D<><>0<>0<><>::
-ui.gd::GDScript/GDScript::1146006212200662369::1753300182::0::1::::<>CanvasLayer<><>0<>0<><>::
+ui.gd::GDScript::1146006212200662369::1789167147::0::1::::<>CanvasLayer<><>0<>0<><>::
 umbrella.gd::GDScript/GDScript::8000017153545320442::1752844108::0::1::::<>Node2D<><>0<>0<><>::
 ::res://Enemy/::1789151696
 ballon.tscn::PackedScene::7102267407280302656::1789151696::0::1::::<><><>0<>0<><>::uid://bcvptvbarpxgs::::res://codes/ballon.gd<>uid://omh27mju3bx7::::res://sprites/ballon/ballon.png<>uid://dypcsn7xr6pth::::res://sprites/ballon/ballon1.png<>uid://dmfrnd1vn1j0s::::res://sprites/ballon/ballon_hit1.png<>uid://cqoxhrlr2scbw::::res://Sounds/hitHurt.wav<>uid://blebedxrssomb::::res://sprites/ballon/ballon_hit2.png<>uid://b5f0y181ofral::::res://sprites/ballon/ballon_hit3.png<>uid://cb0nmoqatppls::::res://sprites/ballon/ballon_hit4.png<>uid://7hvir14bvelf::::res://sprites/ballon/ballon_hit5.png<>uid://c4r4c8g4v6qeb::::res://sprites/ballon/ballon_hit6.png

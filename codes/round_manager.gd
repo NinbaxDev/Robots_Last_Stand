@@ -1,6 +1,6 @@
 extends Node
 
-var current_round = 0
+var current_round = 1
 var limit_round = 14
 var ballons = 0
 var clouds = 1 #feito
@@ -11,4 +11,4 @@ var limit_cloud = 0
 var limit_ballon = 1
 var limit_enemy = 1 # feito
 var current_limit_enemy = 0 # feito
-var create_cloud = false
+var timer_cout = 0

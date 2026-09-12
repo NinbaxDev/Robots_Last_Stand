@@ -5,33 +5,29 @@ extends Node
 @onready var ballon = preload("res://Enemy/ballon.tscn")
 @onready var victory_defeat = $"../UI/Victory_Defeat"
 @onready var timer = $Timer
-var can = false
+var can = true
 
 func _ready() -> void:
 	player.player_die.connect(endgame)
 	start_round()
 
 func start_round():
-	can = false
+	can = true
 	RoundManager.enemy_die = 0
 	RoundManager.ballons_die = 0
 	RoundManager.clouds_die = 0
 	RoundManager.current_limit_enemy = 0
 	RoundManager.clouds = 0
-	# A cada 2 rounds, adiciona 1 Cloud.
-	# Round 1-2 = 0
-	# Round 3-4 = 1
-	# Round 5-6 = 2
-	# Round 7-8 = 3
-	# etc.
+	RoundManager.ballons = 0
+	if RoundManager.current_round > RoundManager.limit_round:
+		endgame(false)
+		return
 	if RoundManager.current_round >= 3:
-		RoundManager.limit_cloud = (RoundManager.current_round + 1) / 2
+		RoundManager.limit_cloud = (RoundManager.current_round - 1) / 2
 	else:
 		RoundManager.limit_cloud = 0
-	if RoundManager.current_round >= RoundManager.limit_round:
-		endgame(false)
-	else:
-		timer.start()
+	timer.start()
+	RoundManager.timer_cout += 1
 
 func _on_timer_timeout() -> void:
 	# Se já atingiu o número total de inimigos da wave,
@@ -50,18 +46,21 @@ func _on_timer_timeout() -> void:
 		boss.connect("cloud_die", Callable(self, "cloud_die"))
 		RoundManager.current_limit_enemy += 1
 		RoundManager.clouds += 1
-	else:
-		var enemy = ballon.instantiate()
-		enemy.position = Vector2(500, -100)
-		add_child(enemy)
-		enemy.connect("ballon_die", Callable(self, "ballon_die"))
-		RoundManager.current_limit_enemy += 1
-	if RoundManager.current_limit_enemy >= RoundManager.limit_enemy:
+	var enemy = ballon.instantiate()
+	enemy.position = Vector2(500, -100)
+	add_child(enemy)
+	enemy.connect("ballon_die", Callable(self, "ballon_die"))
+	RoundManager.current_limit_enemy += 1
+	RoundManager.ballons += 1
+	if RoundManager.current_limit_enemy == RoundManager.limit_enemy:
 		timer.stop()
-	print("inimigos spawnados:", RoundManager.current_limit_enemy)
-	print("limite:", RoundManager.limit_enemy)
-	print("clouds:", RoundManager.clouds)
-	print("limite de clouds:", RoundManager.limit_cloud)
+	if RoundManager.current_limit_enemy > RoundManager.limit_enemy:
+		enemy.queue_free()
+	print("-----------------------")
+	print("inimigos spawnados: ", RoundManager.current_limit_enemy)
+	print("limite: ", RoundManager.limit_enemy)
+	print("clouds: ", RoundManager.clouds)
+	print("ballons: ", RoundManager.ballons)
 
 func ballon_die():
 	RoundManager.ballons_die += 1
@@ -72,21 +71,23 @@ func cloud_die():
 	check_limit_enemy()
 
 func check_limit_enemy():
+	if !can:
+		return
 	RoundManager.enemy_die = RoundManager.ballons_die + RoundManager.clouds_die
 	print("enemy die:", RoundManager.enemy_die)
-	print("limit enemy:", RoundManager.limit_enemy)
 	if RoundManager.enemy_die == RoundManager.limit_enemy:
+		can = false
 		RoundManager.current_round += 1
 		RoundManager.limit_enemy += 1
 		timer.stop()
 		$"../UI".show_options()
-		print("ESPERANDO POWERUP")
+		print("Round atual: ", RoundManager.current_round)
+		print("Round limite: ", RoundManager.limit_round)
 		await Globalsignal.powerup_selected
-		print("POWERUP RECEBIDO")
 		start_round()
 
 func endgame(_player_dead: bool):
-	if !_player_dead:
+	if _player_dead:
 		victory_defeat.text = "DEFEAT"
 	else:
 		victory_defeat.text = "VICTORY"
@@ -99,5 +100,4 @@ func endgame(_player_dead: bool):
 	RoundManager.limit_enemy = 1
 	RoundManager.limit_cloud = 0
 	RoundManager.current_round = 0
-	RoundManager.create_cloud = false
 	get_tree().change_scene_to_file("res://menu.tscn")
