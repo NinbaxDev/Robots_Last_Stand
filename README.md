@@ -9,3 +9,4 @@ This game is a cheap copy of the game Seraph's Last Stand by Andrezitos, made fo
 In this game, you are a robot that uses a umbrella to defend itself and  attack its enemies, the eletric ballons and the angry clouds.
 
 Olá sou o Ninbax um indie gamedev novato, esse é o meu primeiro jogo que finalizo e feito pra uma game jam.
+A branch 1.1 é a versão mais atualizada e correta.
