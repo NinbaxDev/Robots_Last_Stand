@@ -23,6 +23,7 @@ func start_round():
 		endgame(false)
 		return
 	if RoundManager.current_round >= 3:
+		@warning_ignore("integer_division")
 		RoundManager.limit_cloud = (RoundManager.current_round - 1) / 2
 	else:
 		RoundManager.limit_cloud = 0
