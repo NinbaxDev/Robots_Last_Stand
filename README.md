@@ -1,12 +1,59 @@
-PT-BR
+# Robot's Last Stand
 
-Este jogo é uma cópia barata de *Seraph's Last Stand*, de Andrezitos, criado para a Jame Game #51.
-Nele, você controla um robô que usa um guarda-chuva para se defender e atacar seus inimigos: balões elétricos e nuvens furiosas.
+> Um robo que se defende de inimigos que querem te deteriorar com um guada-chuva.
 
-EN-US
+## Sobre o projeto
 
-This game is a cheap copy of the game Seraph's Last Stand by Andrezitos, made for the Jame game #51.
-In this game, you are a robot that uses a umbrella to defend itself and  attack its enemies, the eletric ballons and the angry clouds.
+Robot's Last Stand é um roguelike 2D desenvolvido utilizando Godot Engine.
 
-Olá sou o Ninbax um indie gamedev novato, esse é o meu primeiro jogo que finalizo e feito pra uma game jam.
-A branch 1.1 é a versão mais atualizada e correta.
+O projeto foi desenvolvido para a jame gam #51, com o objetivo de me preparar para a GMTK 25.
+
+## Meu trabalho
+
+Fui responsável por:
+
+- Programação das mecânicas de gameplay;
+- Sistema de movimentação e combate;
+- Implementação dos inimigos;
+- Gerenciamento do estado do jogo;
+- Interface de usuário;
+- Integração e exportação para HTML5.
+
+## Gameplay
+
+Enquanto você se esquiva de projéteis que vem em sua direção devolva o ataque nos inimigos. Depois escolha cartas de melhorias para facilitar a jogatina enquanto a horda de inimigos aumenta.
+
+## Tecnologias
+
+- **Engine:** Godot 4.4 -> 4.6
+- **Linguagem:** GDScript
+- **Arte:** Aseprite
+
+## Como jogar
+
+### Controles
+
+| Esquerda | A |
+
+| Direita | D |
+
+| Pular | Space |
+
+| Bater/Selecionar | LMB |
+
+### Jogar
+
+Link para jogar: https://ninbax-303.itch.io/robots-last-stand
+
+## Imagens
+
+![Imagem 1](...)
+![Imagem 2](...)
+
+## Créditos
+
+- **Ninbax** — Developer
+
+## Licença
+
+[Licença, caso aplicável.]
