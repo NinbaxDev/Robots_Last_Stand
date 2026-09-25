@@ -47,8 +47,7 @@ Link para jogar: https://ninbax-303.itch.io/robots-last-stand
 
 ## Imagens
 
-![Imagem 1](...)
-![Imagem 2](...)
+![Imagem 1](sprites/Background_menu.png)
 
 ## Créditos
 
@@ -56,4 +55,4 @@ Link para jogar: https://ninbax-303.itch.io/robots-last-stand
 
 ## Licença
 
-[Licença, caso aplicável.]
+MIT License
