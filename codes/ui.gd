@@ -32,52 +32,27 @@ func show_options():
 
 func _on_mobility_button_pressed() -> void:
 	PlayerData.velocity *= 1.1
-	$AudioStreamPlayer2D.play()
-	$Mobility_button.visible = false
-	$Overcharge_button.visible = false
-	$Rapidfire_button.visible = false
-	$Regen_button.visible = false
-	$Shield_button.visible = false
-	await get_tree().create_timer(0.5).timeout
-	Globalsignal.powerup_selected.emit()
+	_hide_cards()
 
 func _on_overcharge_button_pressed() -> void:
 	PlayerData.attack += 1
-	$AudioStreamPlayer2D.play()
-	$Mobility_button.visible = false
-	$Overcharge_button.visible = false
-	$Rapidfire_button.visible = false
-	$Regen_button.visible = false
-	$Shield_button.visible = false
-	await get_tree().create_timer(0.5).timeout
-	Globalsignal.powerup_selected.emit()
+	_hide_cards()
 
 func _on_rapidfire_button_pressed() -> void:
 	PlayerData.attack_speed -= 0.1
-	$AudioStreamPlayer2D.play()
-	$Mobility_button.visible = false
-	$Overcharge_button.visible = false
-	$Rapidfire_button.visible = false
-	$Regen_button.visible = false
-	$Shield_button.visible = false
-	await get_tree().create_timer(0.5).timeout
-	Globalsignal.powerup_selected.emit()
+	_hide_cards()
 
 func _on_regen_button_pressed() -> void:
 	PlayerData.max_life += 5
 	PlayerData.life = PlayerData.max_life
 	life_update_player(PlayerData.life)
-	$AudioStreamPlayer2D.play()
-	$Mobility_button.visible = false
-	$Overcharge_button.visible = false
-	$Rapidfire_button.visible = false
-	$Regen_button.visible = false
-	$Shield_button.visible = false
-	await get_tree().create_timer(0.5).timeout
-	Globalsignal.powerup_selected.emit()
+	_hide_cards()
 
 func _on_shield_button_pressed() -> void:
 	PlayerData.shield = 3
+	_hide_cards()
+
+func _hide_cards() -> void:
 	$AudioStreamPlayer2D.play()
 	$Mobility_button.visible = false
 	$Overcharge_button.visible = false

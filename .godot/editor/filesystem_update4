@@ -6,3 +6,4 @@ res://codes/Player/hud_player.gd
 res://codes/Player/pause_menu.gd
 res://codes/battle_manager.gd
 res://Scenes/player.tscn
+res://codes/ui.gd
