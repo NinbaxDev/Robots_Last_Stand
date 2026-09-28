@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dpis0rrjm4vhp"]
+
+[ext_resource type="Script" uid="uid://pw2b811wc87" path="res://codes/Player.gd" id="1_fkybt"]
+[ext_resource type="Texture2D" uid="uid://bn4fqbifqp0xh" path="res://sprites/Shield.png" id="2_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://cp76nuhgguoc6" path="res://sprites/robot_jame_gam.png" id="3_3smsa"]
+[ext_resource type="PackedScene" uid="uid://cn7ib4ea8l5cp" path="res://Player/umbrella.tscn" id="4_8erm5"]
+[ext_resource type="AudioStream" uid="uid://cqoxhrlr2scbw" path="res://Sounds/hitHurt.wav" id="5_f1ek2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3p86s"]
+size = Vector2(63.3333, 117.308)
+
+[node name="Player" type="CharacterBody2D" unique_id=1372048070 groups=["Player"]]
+process_mode = 3
+scale = Vector2(0.6, 0.52)
+script = ExtResource("1_fkybt")
+
+[node name="Shield" type="Sprite2D" parent="." unique_id=1734587435]
+position = Vector2(-3.33331, -8.65381)
+scale = Vector2(4.16667, 4.98798)
+texture = ExtResource("2_x3wgy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1428915999]
+texture_filter = 1
+position = Vector2(0, 5.76923)
+scale = Vector2(4, 4)
+texture = ExtResource("3_3smsa")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=881754549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1056552515]
+position = Vector2(-1.6666598, 10.576416)
+shape = SubResource("RectangleShape2D_3p86s")
+
+[node name="Umbrella" parent="." unique_id=1994651329 instance=ExtResource("4_8erm5")]
+position = Vector2(-1.14441e-05, -88.4615)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=961620780]
+stream = ExtResource("5_f1ek2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=838198526]
+position = Vector2(-1.6666598, 10.576416)
+shape = SubResource("RectangleShape2D_3p86s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

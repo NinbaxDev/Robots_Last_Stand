@@ -13,7 +13,7 @@ func _ready() -> void:
 	PlayerData.attack_speed = 0.4
 	PlayerData.velocity = 200
 	PlayerData.shield = 0
-	PlayerData.Pause_menu = get_parent().get_node("Pause_menu")
+	PlayerData.Pause_menu = $"../HUD/HUD_Player/Pause_menu"
 
 func _physics_process(delta: float) -> void:
 	if stop:
@@ -47,7 +47,7 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 		take_damage(1)
 
 func _input(event) -> void:
-	if event.is_action_pressed("ui_cancel") and PlayerData.Pause_menu:
+	if event.is_action_pressed("ui_cancel"):
 		if PlayerData.Pause_menu.visible:
 			PlayerData.Pause_menu.hide_menu()
 		else:

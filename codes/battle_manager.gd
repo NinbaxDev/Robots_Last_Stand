@@ -3,7 +3,7 @@ extends Node
 @onready var player = get_node("../Player")
 @onready var cloud = preload("res://Enemy/cloud.tscn")
 @onready var ballon = preload("res://Enemy/ballon.tscn")
-@onready var victory_defeat = $"../UI/Victory_Defeat"
+@onready var victory_defeat = $"../HUD/Victory_Defeat"
 @onready var timer = $Timer
 var can = true
 
@@ -81,7 +81,7 @@ func check_limit_enemy():
 		RoundManager.current_round += 1
 		RoundManager.limit_enemy += 1
 		timer.stop()
-		$"../UI".show_options()
+		$"../HUD".show_options()
 		print("Round atual: ", RoundManager.current_round)
 		print("Round limite: ", RoundManager.limit_round)
 		await Globalsignal.powerup_selected

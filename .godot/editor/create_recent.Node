@@ -1,10 +1,11 @@
+CharacterBody2D
+VBoxContainer
+CanvasLayer
 Sprite2D
+Label
+TextureProgressBar
 Button
 AudioStreamPlayer2D
-Label
-CanvasLayer
-VBoxContainer
-TextureProgressBar
 ProgressBar
 Area2D
 Timer

@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bhicpd23ge5sd"]
+
+[ext_resource type="Script" uid="uid://cox3m10hg46be" path="res://codes/Player/life_bar.gd" id="1_plv2f"]
+[ext_resource type="Texture2D" uid="uid://dmwda6yi8vp6r" path="res://sprites/Lifebar.png" id="2_up6ux"]
+[ext_resource type="Script" uid="uid://c8kkqncmq47sr" path="res://codes/Player/pause_menu.gd" id="4_pusk7"]
+[ext_resource type="Texture2D" uid="uid://bcj38puo0ixww" path="res://sprites/Back_button.png" id="5_s182c"]
+[ext_resource type="Texture2D" uid="uid://dmacc4f8yom5s" path="res://sprites/botoes.png" id="6_i08p2"]
+[ext_resource type="Texture2D" uid="uid://f73m2vstq702" path="res://sprites/Exit_button.png" id="7_v42m8"]
+
+[sub_resource type="Gradient" id="Gradient_g02ee"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_plv2f"]
+gradient = SubResource("Gradient_g02ee")
+width = 360
+height = 21
+
+[sub_resource type="Gradient" id="Gradient_6hdfk"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kk6uo"]
+gradient = SubResource("Gradient_6hdfk")
+width = 360
+height = 21
+
+[node name="HUD_Player" type="Control" unique_id=125166623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=856402063]
+position = Vector2(217.5, 36)
+scale = Vector2(0.957, 0.88)
+texture = ExtResource("2_up6ux")
+
+[node name="LifeBar" type="TextureProgressBar" parent="." unique_id=1658599578]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 27.0
+offset_right = 397.0
+offset_bottom = 48.0
+texture_under = SubResource("GradientTexture2D_plv2f")
+texture_progress = SubResource("GradientTexture2D_kk6uo")
+script = ExtResource("1_plv2f")
+
+[node name="Pause_menu" type="CanvasLayer" parent="." unique_id=1259878851]
+script = ExtResource("4_pusk7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause_menu" unique_id=1858622261]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -62.5
+offset_right = 35.5
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_button" type="Button" parent="Pause_menu/VBoxContainer" unique_id=228781033]
+layout_mode = 2
+icon = ExtResource("5_s182c")
+flat = true
+
+[node name="Menu_button" type="Button" parent="Pause_menu/VBoxContainer" unique_id=490920900]
+layout_mode = 2
+icon = ExtResource("6_i08p2")
+flat = true
+
+[node name="Exit_button" type="Button" parent="Pause_menu/VBoxContainer" unique_id=1903112774]
+layout_mode = 2
+icon = ExtResource("7_v42m8")
+flat = true
+
+[connection signal="pressed" from="Pause_menu/VBoxContainer/Back_button" to="Pause_menu" method="_on_back_button_pressed"]
+[connection signal="pressed" from="Pause_menu/VBoxContainer/Menu_button" to="Pause_menu" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Pause_menu/VBoxContainer/Exit_button" to="Pause_menu" method="_on_exit_button_pressed"]

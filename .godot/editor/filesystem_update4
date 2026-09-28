@@ -1,2 +1,8 @@
 res://wizard_stand.tscn
 res://codes/Player.gd
+res://codes/Player/life_bar.gd
+res://Scenes/hud_player.tscn
+res://codes/Player/hud_player.gd
+res://codes/Player/pause_menu.gd
+res://codes/battle_manager.gd
+res://Scenes/player.tscn
